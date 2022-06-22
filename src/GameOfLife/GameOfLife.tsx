@@ -4,7 +4,7 @@ import Api from '../Api';
 import { BoardContext } from '../App/App';
 import Board from '../Board/Board';
 import EmptyBoard from '../EmptyBoard/EmptyBoard';
-import { Board as MessageBoard, BoardState, BoardStateResponse } from '../messages';
+import { Board as MessageBoard, BoardStateResponse } from '../messages';
 
 const GameOfLife = (): JSX.Element => {
     const { boardState, setBoardState } = React.useContext(BoardContext);
@@ -32,15 +32,11 @@ const GameOfLife = (): JSX.Element => {
         initResult.mutate({ initialState: initialState }, queryOptions);
     };
 
-    const onResetBoard = (emptyBoard: BoardState) => {
-        setBoardState(emptyBoard);
-    };
-
     return (
         <>
             <h2>Game Of Life</h2>
             {boardState.isInitialized ?
-                <Board onResetBoard={onResetBoard} /> :
+                <Board /> :
                 <EmptyBoard onSubmitInitalState={handleSubmitInitialState} />
             }
         </>

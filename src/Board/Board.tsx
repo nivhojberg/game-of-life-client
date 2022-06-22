@@ -7,11 +7,7 @@ import { BoardContext } from '../App/App';
 import Row from '../Components/Row';
 import Modal from '../Modal/Modal';
 
-interface Props {
-    onResetBoard: (emptyBoard: BoardState) => void;
-};
-
-const Board = (props: Props): JSX.Element => {
+const Board = (): JSX.Element => {
     const { boardState, setBoardState } = React.useContext(BoardContext);
     const [isRunning, setIsRunning] = React.useState(false);
     const [isDeadModalOpen, setIsDeadModalOpen] = React.useState(false);
@@ -41,7 +37,7 @@ const Board = (props: Props): JSX.Element => {
         if (!isRunning) {
             resetResult.mutate(null, {
                 onSuccess({ data }: { data: BoardStateResponse }) {
-                    props.onResetBoard(data.boardState);
+                    setBoardState(data.boardState);
                 },
             });
         }

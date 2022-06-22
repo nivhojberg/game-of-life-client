@@ -17,8 +17,8 @@ create react app<br />
 Axios<br />
 webpack
 
-Using React Context API for board state management
-Using React Query for sending requests to the server (wrapping axios)
+Using React Context API for board state management.<br />
+Using React Query for sending requests to the server (wrapping axios).
 
 The src folder is containing the main files of the application, a folder for each logic component and folder "Components" for generic components.
 The Api.ts file is containing all the axios requests functions.
@@ -47,5 +47,5 @@ If I could spend more time on the assignment, I would:
 # Run project locally instructions
 1. Clone the project
 2. Inside the project folder Run:<br />
-    a. Run "npm i"<br />
-    b. run "npm run dev"
+    a. "npm i"<br />
+    b. "npm run dev"

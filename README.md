@@ -3,16 +3,14 @@ This project is the client side of an application based on "Game of Life".<br />
 The client is communicating with the server and is responsible for:
 1. Allow the player<br />
     a. to select elements on the grid (aka “the initial state”)<br />
-    b. to press “Next”<br />
-        i. Which update the state of life once<br />
+    b. to press “Next” Which update the state of life once<br />
     c. to press the “Reset” button, unsetting the initial state (only when the game is stopped)<br />
-    d. to press the “Start” / “Stop” button (once the initial state is selected / once the same is started, respectively)<br />
-        i. Once started, the game will continue until there is no life left (or the “Stop” button is pressed)<br />
+    d. to press the “Start” / “Stop” button (once the initial state is selected / once the same is started, respectively). Once started, the game will continue until there is no life left (or the “Stop” button is pressed)<br />
 2. Show a number of generations (steps) of life
 3. Show a popup when all the life is dead
 
 # General Architecture of the application
-The main technologies that were used are:
+The main technologies that were used are:<br />
 Typescript<br />
 React.js<br />
 create react app<br />

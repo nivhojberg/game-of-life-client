@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "noUnusedParameters": true,
+        "jsx": "react-jsx",
+        "target": "es5",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "allowJs": true,
+        "outDir": "../dist",
+        "lib": ["es5", "es6", "es2019", "dom"]
+    }
+}

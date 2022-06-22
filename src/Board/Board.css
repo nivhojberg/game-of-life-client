@@ -1,0 +1,34 @@
+.alive {
+  background-color: #000;
+}
+
+.dead {
+  background-color: #fff;
+}
+
+.cell {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #777;
+}
+
+.board {
+  margin: auto;
+  border: 1px solid #333;
+  width: fit-content;
+}
+
+.row {
+  display: flex;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+  gap: 10px;
+}
+
+.step {
+  margin: 10px;
+}

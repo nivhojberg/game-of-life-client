@@ -1,0 +1,46 @@
+.dimmer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.4;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dimmer > * {
+    opacity: 1;
+}
+
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000000;
+}
+
+.modal {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.modal .title {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.modal .content {
+    margin: 30px;
+    font-size: 18px
+}

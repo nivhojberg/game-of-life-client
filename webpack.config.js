@@ -1,7 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
-    mode: "development",
+    mode: process.env.MODE || "development",
     entry: {
         dev: "./src/index.tsx",
     },
@@ -13,7 +14,7 @@ module.exports = {
         extensions:[".tsx", ".ts", ".js", ".jsx"],
     },
     devServer: {
-        port: 3001
+        port: process.env.PORT || 3001
     },
     module: {
         rules: [
@@ -34,6 +35,11 @@ module.exports = {
           template: './public/index.html',
           filename: './index.html',
           favicon: './public/favicon.ico'
+        }),
+        new webpack.DefinePlugin({
+            'process.env.MODE': JSON.stringify(process.env.MODE),
+            'process.env.API_URL': JSON.stringify(process.env.API_URL),
+            'process.env.PORT': JSON.stringify(process.env.PORT)
         })
-      ]
+    ],
 };

@@ -1,5 +1,5 @@
 import axios from "axios"
-import { API_URL } from "./App/App"
+import { API_URL } from "./App/App";
 import { InitStateRequest } from "./messages";
 
 const Api = {

@@ -26,7 +26,8 @@
     "eject": "react-scripts eject",
     "ts-build": "tsc --project src",
     "webpack-build": "webpack",
-    "dev": "webpack serve --mode development"
+    "dev": "webpack serve --mode development",
+    "prod": "webpack serve --mode production"
   },
   "eslintConfig": {
     "extends": [
